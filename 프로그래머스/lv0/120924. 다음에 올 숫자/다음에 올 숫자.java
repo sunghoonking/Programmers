@@ -5,30 +5,23 @@ class Solution {
     public int solution(int[] common) {
 
         int answer =0;
+       
+        int size = common.length-1;
     
-        List<Integer> arrayInteger = new ArrayList<>();
-        for(int num: common){
-            arrayInteger.add(num);
-        }
-        
-        int size = arrayInteger.size()-1;
-    
-        int lastIndex = arrayInteger.get(size);
-        
-        
-        
-        int minus = arrayInteger.get(1)-arrayInteger.get(0);
-        int minus2 = arrayInteger.get(2) - arrayInteger.get(1);
+        int lastIndex = common[size];
+
+        int minus =  common[1]- common[0];
+        int minus2 = common[2] - common[1];
         int as = 0;
+        
         if(minus==minus2){
             as=minus;
             answer = lastIndex+as;
         }else{
-            as = arrayInteger.get(1)/arrayInteger.get(0);
+            as = common[1]/common[0];
             answer = lastIndex*as;
         }
         
-    
         return answer;
     }
 }
