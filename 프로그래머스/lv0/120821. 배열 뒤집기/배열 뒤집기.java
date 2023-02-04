@@ -8,8 +8,7 @@ class Solution {
             if(w == num_list.length){
                   break;
             }
-            int a = num_list[i];
-            answer[w] = a;
+            answer[w] = num_list[i];
             
              w++;
           } 
